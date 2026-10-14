@@ -1,0 +1,91 @@
+/* Shared course stylesheet: Tufte-inspired, print-friendly.
+   Every lesson and reference doc links this file. */
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@500;600&display=swap");
+
+:root {
+  --ink: #1d1b18;
+  --muted: #6b655c;
+  --paper: #fffdf8;
+  --rule: #e4ddd0;
+  --accent: #9c2b1e;      /* card-shop red */
+  --accent-soft: #f6e7e3;
+  --good: #2f6b3a;
+  --good-soft: #e5f1e6;
+  --bad: #9c2b1e;
+  --bad-soft: #f8e4e1;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, "Helvetica Neue", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece6dc; --muted: #a69e92; --paper: #1a1916; --rule: #3a3731;
+    --accent: #e0745f; --accent-soft: #3a241f;
+    --good: #7fc28a; --good-soft: #1f3123; --bad: #e0745f; --bad-soft: #3a221e;
+  }
+}
+
+* { box-sizing: border-box; }
+html { font-size: 18px; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--serif); line-height: 1.6;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem 5rem; }
+
+/* Typography */
+h1 { font-weight: 400; font-size: 2.2rem; line-height: 1.15; margin: 0 0 .3rem; }
+h2 { font-weight: 400; font-style: italic; font-size: 1.45rem; margin: 2.6rem 0 .6rem; }
+h3 { font-weight: 600; font-size: 1.05rem; margin: 1.6rem 0 .3rem; }
+p, li { font-size: 1rem; }
+a { color: var(--accent); text-underline-offset: 2px; }
+.kicker {
+  font-family: var(--sans); font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: .6rem;
+}
+.subtitle { font-style: italic; color: var(--muted); font-size: 1.15rem; margin: 0 0 2rem; }
+.cite { font-size: .78rem; vertical-align: super; line-height: 0; }
+.cite a { text-decoration: none; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+/* Callouts */
+.callout {
+  border-left: 3px solid var(--accent); background: var(--accent-soft);
+  padding: .9rem 1.1rem; margin: 1.4rem 0; border-radius: 0 4px 4px 0;
+}
+.callout p:first-child { margin-top: 0; } .callout p:last-child { margin-bottom: 0; }
+.callout .label {
+  font-family: var(--sans); font-size: .7rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .25rem;
+}
+
+/* Tables */
+table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: .92rem; }
+th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--sans); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+
+/* Lever grid (value levers) */
+.levers { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: 1.4rem 0; }
+.lever { border: 1px solid var(--rule); border-radius: 6px; padding: .8rem 1rem; }
+.lever b { font-family: var(--sans); font-size: .85rem; letter-spacing: .04em; color: var(--accent); }
+.lever p { margin: .3rem 0 0; font-size: .92rem; }
+@media (max-width: 560px) { .levers { grid-template-columns: 1fr; } }
+
+/* Nav + footer */
+.nav { font-family: var(--sans); font-size: .78rem; display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 2.5rem; color: var(--muted); }
+.nav a { text-decoration: none; }
+.source-box { border: 1px solid var(--rule); border-radius: 6px; padding: 1rem 1.2rem; margin: 2rem 0; }
+.ask-teacher { font-style: italic; color: var(--muted); }
+
+/* Reference docs: denser layout */
+body.reference main { max-width: 48rem; }
+body.reference h2 { margin-top: 1.8rem; }
+
+@media print {
+  html { font-size: 11pt; }
+  body { background: #fff; color: #000; }
+  main { padding: 0; max-width: none; }
+  .nav, .quiz button.reveal, .no-print { display: none; }
+  a { color: #000; }
+  .lever, .callout, table { break-inside: avoid; }
+}

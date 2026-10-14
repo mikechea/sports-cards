@@ -1,0 +1,5 @@
+# Private learning notes stay local
+*.md
+learning-records/
+.playwright-mcp/
+.DS_Store
