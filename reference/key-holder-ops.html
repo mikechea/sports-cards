@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference · Key Holder Ops</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="reference">
+<main>
+  <nav class="nav"><span>Sports Cards · Reference</span><a href="../lessons/0006-key-holder-operations.html">← Lesson 6</a></nav>
+  <div class="kicker">Cheat sheet</div>
+  <h1>Key Holder Ops</h1>
+  <p class="subtitle">Open → run the drawer → close balanced → read the numbers</p>
+
+  <h2>The drawer formula</h2>
+  <table>
+    <tr><td><strong>Expected</strong></td><td>starting bank + cash sales − cash refunds − safe drops &amp; paid-outs + paid-ins</td></tr>
+    <tr><td><strong>Over / short</strong></td><td>counted − expected (negative = short)</td></tr>
+    <tr><td><strong>Deposit</strong></td><td>counted − bank left for next shift</td></tr>
+  </table>
+  <p><strong>Rules:</strong> count blind (before seeing expected) · recount by denomination · overs are as bad as shorts · log every drop, paid-out, and variance · manager checks the count, a second person recounts big variances · per-cashier over/short log · learn the store's variance threshold (small shops often use $5–10).</p>
+
+  <h2>Open / close</h2>
+  <table>
+    <tr><th>Open</th><th>Close</th></tr>
+    <tr><td>Check outside first; signs of break-in → don't enter, call police</td><td>Announce close, clear store, check back areas and bathrooms</td></tr>
+    <tr><td>Two people; lock door behind you; alarm off; cameras on</td><td>Count cash in a secure room at a set time; drawers to safe</td></tr>
+    <tr><td>POS on; count each starting bank</td><td>Settle card batch; close register session; prep deposit</td></tr>
+    <tr><td>Read the handover log; huddle on goal and yesterday's numbers</td><td>Handover log; alarm on; door checked; two people present</td></tr>
+  </table>
+
+  <h2>Shopify POS cash</h2>
+  <table>
+    <tr><td><strong>Open session</strong></td><td>Enter the starting amount in the drawer (tap Count cash to verify).</td></tr>
+    <tr><td><strong>Add / Remove cash</strong></td><td>Safe drops, paid-outs, top-ups. Pick a reason code if required.</td></tr>
+    <tr><td><strong>Close session</strong></td><td>Enter counted cash, compare to expected, leave the float. Closed sessions can't be edited.</td></tr>
+    <tr><td><strong>Reports (POS Pro)</strong></td><td>Opening discrepancy (last close vs. this open) and closing discrepancy (expected vs. counted).</td></tr>
+  </table>
+
+  <h2>Daily numbers</h2>
+  <table>
+    <tr><th>KPI</th><th>Formula</th><th>Example</th></tr>
+    <tr><td><strong>% to goal</strong></td><td>sales ÷ goal × 100</td><td>$9,000 ÷ $10,000 = 90%</td></tr>
+    <tr><td><strong>Conversion</strong></td><td>transactions ÷ visitors × 100</td><td>60 ÷ 400 = 15%</td></tr>
+    <tr><td><strong>ATV</strong></td><td>sales ÷ transactions</td><td>$9,000 ÷ 60 = $150</td></tr>
+    <tr><td><strong>UPT</strong></td><td>units ÷ transactions</td><td>150 ÷ 60 = 2.5</td></tr>
+    <tr><td><strong>Sales per hour</strong></td><td>sales ÷ hours (labor hours or open hours; check which)</td><td>$9,000 ÷ 10 h = $900/h</td></tr>
+  </table>
+
+  <h2>Protect the case</h2>
+  <p>One customer at a time · one item out at a time · lock the case right after every take-out and put-back · keys on your wrist, never on the counter · watch for distraction (a friend calling you away) · cameras cover the floor · high-value stock secured overnight.</p>
+
+  <h2 class="no-print">Drawer counter</h2>
+  <div class="drawer-counter" data-bank="200"></div>
+
+  <p style="font-size:.75rem;color:var(--muted)">Sources: <a href="https://www.shopify.com/blog/balancing-a-cash-drawer">Shopify: Balancing a cash drawer</a> · <a href="https://www.shopify.com/blog/retail-opening-closing-procedures">Shopify: Opening/closing</a> · <a href="https://beancount.io/blog/2026/09/14/end-of-day-close-z-reports-cash-drawer-daily-sales-reconciliation-guide">Beancount</a> · <a href="https://bf.unl.edu/policies/cash-handling">UNL cash handling</a> · <a href="https://help.shopify.com/en/manual/sell-in-person/shopify-pos/cash-register-management/register-sessions-in-shopify-pos">Shopify Help: sessions</a> · <a href="https://help.shopify.com/en/manual/sell-in-person/shopify-pos/cash-register-management/cash-tracking-reports-by-location">Shopify Help: reports</a> · <a href="https://storeforce.com/blog/retail-kpi-guide">StoreForce</a> · <a href="https://www.shopify.com/blog/retail-metrics">Shopify: Retail metrics</a> · <a href="https://ode1.jewelersmutual.com/resources/business/risk-management/how-to-sell-jewelry-security">Jewelers Mutual</a> · <a href="https://www.wfmj.com/news/how-stores-and-vendors-try-stopping-trading-card-theft/article_e1b3f01b-7619-4b70-b55d-952a37b1577f.html">WFMJ</a></p>
+</main>
+<script src="../assets/drawer-counter.js"></script>
+</body>
+</html>

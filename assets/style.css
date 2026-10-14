@@ -69,7 +69,12 @@ th { font-family: var(--sans); font-size: .72rem; letter-spacing: .08em; text-tr
 .lever { border: 1px solid var(--rule); border-radius: 6px; padding: .8rem 1rem; }
 .lever b { font-family: var(--sans); font-size: .85rem; letter-spacing: .04em; color: var(--accent); }
 .lever p { margin: .3rem 0 0; font-size: .92rem; }
-@media (max-width: 560px) { .levers { grid-template-columns: 1fr; } }
+@media (max-width: 560px) {
+  .levers { grid-template-columns: 1fr; }
+  /* Wide tables scroll inside themselves instead of widening the page */
+  table { display: block; overflow-x: auto; }
+  code { overflow-wrap: anywhere; }
+}
 
 /* Nav + footer */
 .nav { font-family: var(--sans); font-size: .78rem; display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 2.5rem; color: var(--muted); }
